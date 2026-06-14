@@ -18,8 +18,7 @@ st.set_page_config(
 # FILE SETUP
 # -------------------------
 
-if not os.path.exists("qr_codes"):
-    os.makedirs("qr_codes")
+os.makedirs("qr_codes", exist_ok=True)
 
 if not os.path.exists("users.csv"):
     pd.DataFrame({
